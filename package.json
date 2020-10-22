@@ -1,7 +1,6 @@
 {
   "name": "v1",
   "version": "1.0.0",
-  
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -11,7 +10,7 @@
   "keywords": [],
   "author": "",
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "license": "ISC",
   "dependencies": {
@@ -19,6 +18,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.6",
-    "opentok": "^2.10.0"
+    "opentok": "^2.10.0",
+    "pg": "^8.4.1"
   }
 }
