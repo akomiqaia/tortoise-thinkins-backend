@@ -5,7 +5,7 @@ const cors = require("cors");
 const OpenTok = require("opentok");
 const app = express();
 app.use(cors());
-
+const PORT = process.env.PORT || 8000;
 const apiKey = process.env.API_KEY;
 const apiSecret = process.env.API_SECRET;
 
@@ -72,7 +72,7 @@ app.get("/room/:name", (req, res) => {
   console.log(roomToSessionIdDictionary)
 });
 
-app.listen(8000, function () {
-  console.log("You're app is now ready at http://localhost:8000/");
+app.listen(PORT, function () {
+  console.log(`You're app is now ready at http://localhost:${PORT}/`);
 });
 
