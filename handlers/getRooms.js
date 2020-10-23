@@ -1,8 +1,13 @@
 const getRooms = require("../models/getRoomsModel");
-const room = require("../models/getRoomsModel");
 
-function getRooms(req, res, next) {
-
+function getRoomsHandler(req, res, next) {
+  getRooms().then((data) => {
+    const rooms = data;
+    res.setHeader("Content-Type", "application/json");
+    res.send({
+      rooms,
+    });
+  });
 }
 
-module.exports = getRooms
+module.exports = getRoomsHandler;
