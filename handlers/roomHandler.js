@@ -20,8 +20,6 @@ const opentok = new OpenTok(apiKey, apiSecret);
 const roomToSessionIdDictionary = {};
 console.log("roomToSessionIdDictionary:", roomToSessionIdDictionary);
 
-// Starts the express app
-
 function createRoom(req, res, next) {
   const roomName = req.params.name;
   console.log(
