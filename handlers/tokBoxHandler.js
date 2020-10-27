@@ -69,7 +69,7 @@ function startRecording(req, res, next) {
     name: archiveName,
     hasAudio: hasAudio,
     hasVideo: hasVideo,
-    outputMode: outputMode,
+    outputMode: outputMode
   };
   if (outputMode === "composed") {
     archiveOptions.layout = { type: "horizontalPresentation" };
