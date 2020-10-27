@@ -87,7 +87,6 @@ function startRecording(req, res, next) {
             err.message
             );
           }
-          console.log(archive)
           return res.status(200).json({archive});
         }
         );
