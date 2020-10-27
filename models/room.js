@@ -19,4 +19,10 @@ function getRoom(name) {
     .catch(error => error)
 }
 
-module.exports = { createRoom, getRoom };
+function getSessionId(sessionId) {
+  return db
+  .query('SELECT * FROM tortoise_sessions WHERE sessionid=($1)', [sessionId])
+  .then(session => session.rows[0])
+  .catch(error => error)
+}
+module.exports = { createRoom, getRoom, getSessionId };
